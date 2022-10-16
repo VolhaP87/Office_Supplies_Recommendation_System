@@ -5,7 +5,7 @@ Author: Volha Puzikava
 ***
 
 ## Disclaimer
-The described analyses fulfill educational purposes only. The hypothetical business case, made-up data and the results of the perfomed analyses should not be considered as real recommendations of the seller, and have not been approved by any professional organization or trading company.
+The described analyses fulfill educational purposes only. The hypothetical business case, made-up data and the results of the performed analyses should not be considered as real recommendations of the seller, and have not been approved by any professional organization or trading company.
 ***
 
 ## Overview
