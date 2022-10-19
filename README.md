@@ -99,27 +99,33 @@ The A/B Testing showed that the change in the package of the products (pack of t
 Thus, for the Stationary and Co. Company we can advise to use the SVD model for the recommendation system of their office products in order to provide a high level of presonalization to their customers. As concerns the change in the package quantity, we are 99% confident that there is an observable effect in buying rate if the changes are made. However, offering a pack of two instead of one will decrease the buying rate by about 6.25%. Thus, we can advise not to implement any changes in the package quantity.
 
 Of coarse, the models are not ideal and more digging can be beneficial. Thus, we can try to tune the ALS model and see if it can work any better. As concerns the A/B testing, the company should come out with some other ideas how to increase sales, like changing the website by making it more user-friendly or just offering discounts on the customers' birthdays...
+***
 
 ### Reproduction Instructions
 This project uses:
 
 * [Anaconda](https://www.anaconda.com), a package and environment management tool
-
 * Python 3.8.5, with the following additional packages/libraries:
-
-** Pandas 1.1.3
-** NumPy 1.18.5
-** Matplotlib 3.3.1
-** Seaborn 0.11.0
-** Scikit-Learn 0.23.2
-** Scikit-Surprise 1.1.1
-** PySpark 3.0.0
+  * Pandas 1.1.3
+  * NumPy 1.18.5
+  * Matplotlib 3.3.1
+  * Seaborn 0.11.0
+  * Scikit-Learn 0.23.2
+  * Scikit-Surprise 1.1.1
+  * PySpark 3.0.0
+  
 If you would like to follow the analysis locally and have the above tools:
-
-Fork and clone this repository.
-Go to the [Amazon review data (2018)](http://deepyeti.ucsd.edu/jianmo/amazon/index.html) page and download the data files.
-You should then be able to run the analysis in the provided [Office_Supplies Jupyter Notebook](https://github.com/VolhaP87/Office_Supplies_Recommendation_System/blob/main/Office_Supplies.ipynb).
+* Fork and clone this repository.
+* Go to the [Amazon review data (2018)](http://deepyeti.ucsd.edu/jianmo/amazon/index.html) page and download the data files.
+* You should then be able to run the analysis in the provided [Office_Supplies Jupyter Notebook](https://github.com/VolhaP87/Office_Supplies_Recommendation_System/blob/main/Office_Supplies.ipynb).
+***
 
 ### Sources
 * [Amazon review data (2018)](http://deepyeti.ucsd.edu/jianmo/amazon/index.html) page
-* [Recommendation System Presentation]()
+* [Recommendation System Presentation](https://github.com/VolhaP87/Office_Supplies_Recommendation_System/blob/main/Recommendation%20System%20Presentation.pdf)
+***
+
+### Contact Information
+With questions or feedback on this repository, please reach out via:
+* [GitHub](https://github.com/VolhaP87?tab=repositories)
+* [LinkedIn](https://www.linkedin.com/in/volha-puzikava-2319294a/)
