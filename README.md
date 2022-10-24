@@ -63,7 +63,7 @@ The model takes into account the mean rating of each item. The model yielded RMS
 Based off the resulted outputs, it seemed like the best performing model was the SVD model with n_factors equal to 20 and a regularization rate of 0.02. The model had a RMSE of about 1.366 (lowest among the models), meaning that it was off by roughly 1 point for each guess it made for ratings. The SVD model was used to make predictions.
 
 Since the goal of the project was to create recommendations specifically tailored to the customers' preferences, the first step was to create a function that would allow to pick randomly selected products and ask the customers to rate them. If the customers had never used the products, they would be able to skip rating them. After that, ten recommendations for the new user were made based on the new ratings left by the same user.
-![](Images/Screen_Recording_2022-10-24_at_4_16_45_PM_AdobeExpress.gif)
+![](Images/VIDEO.gif)
 
 ### Modeling in PySpark
 The saved datasets were used to build a recommendation system using the collaborative filtering technique with Spark's Alternating Least Squares implementation.
