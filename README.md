@@ -44,7 +44,7 @@ Singular-Value Decomposition or SVD is a common and widely used matrix decomposi
 
 Grid search was implemented to expedite the process of trying out different parameters. The parameter n_jobs was set to -1 to ensure that all of the cores on the computer would be used to process fitting and evaluating all of the models.
 
-It turned out that the best parameters were n_factors of 20 and a regularization rate of 0.02 that yielded the RMSE value of 1.366.
+It turned out that the best parameters were n_factors of 20 and a regularization rate of 0.02 that yielded the RMSE value of 1.368.
 
 ### Neighborhood-Based Methods (Memory-Based)
 Pearson correlation was used as a similarity metric. Cross-validatoin was performed to determine the optimal model.
@@ -52,15 +52,15 @@ Pearson correlation was used as a similarity metric. Cross-validatoin was perfor
 #### KNN Basic Model
 KNN approache involves finding the top K nearest neighbors for an item. Ratings from the list of nearest neighbors are combined to predict the unknown rating. This involves finding of all item-item correlations.
 
-KNN Basic model yielded RMSE value of 1.431.
+KNN Basic model yielded RMSE value of 1.433.
 
 #### KNN Baseline Model
-This is a more advanced method because it adds a bias term that is calculated by the way of minimizing a cost function. The model had RMSE of 1.370.
+This is a more advanced method because it adds a bias term that is calculated by the way of minimizing a cost function. The model had RMSE of 1.372.
 
 #### KNN with Means Model
-The model takes into account the mean rating of each item. The model yielded RMSE of 1.433.
+The model takes into account the mean rating of each item. The model yielded RMSE of 1.435.
 
-Based off the resulted outputs, it seemed like the best performing model was the SVD model with n_factors equal to 20 and a regularization rate of 0.02. The model had a RMSE of about 1.366 (lowest among the models), meaning that it was off by roughly 1 point for each guess it made for ratings. The SVD model was used to make predictions.
+Based off the resulted outputs, it seemed like the best performing model was the SVD model with n_factors equal to 20 and a regularization rate of 0.02. The model had a RMSE of about 1.368 (lowest among the models), meaning that it was off by roughly 1 point for each guess it made for ratings. The SVD model was used to make predictions.
 
 Since the goal of the project was to create recommendations specifically tailored to the customers' preferences, the first step was to create a function that would allow to pick randomly selected products and ask the customers to rate them. If the customers had never used the products, they would be able to skip rating them. After that, ten recommendations for the new user were made based on the new ratings left by the same user.
 ![](Images/VIDEO.gif)
@@ -71,7 +71,7 @@ The saved datasets were used to build a recommendation system using the collabor
 #### Alternating Least Squares
 SparkSession object was initialized and the rating dataset was imported. Since reviewer_ID and product_ID columns were of a string type, StringIndexer had to be used. StringIndexer encoded string columns of labels to columns of label indices. After the application of StringIndexer, the ALS model was fit on the training set, the model was evaluated and RMSE of the test set was printed out.
 
-Although the RMSE value of the ALS model was much higher than the RMSE of the SVD model (4.209), the predictions were still made. ALS is good for large-scaled collaborative filtering problems and slightly different from SVD. Spark attempts to offer a somewhat abstracted approach to the development of algorithms within a distributed computing environment, but it performs much slower.
+Although the RMSE value of the ALS model was much higher than the RMSE of the SVD model (4.191), the predictions were still made. ALS is good for large-scaled collaborative filtering problems and slightly different from SVD. Spark attempts to offer a somewhat abstracted approach to the development of algorithms within a distributed computing environment, but it performs much slower.
 
 Before making any recommendations in Spark, the function that took in product_Index and returned a string that represented the product_ID was created. After that the dataset with meta data was imported into a Spark DataFrame. The function that returned the product_ID as a product title was formed. Also, a function that took in a new user and some products the user had rated and then returned 10 highest recommended products was created.
 
@@ -95,7 +95,7 @@ Since the p-value was less than 0.01, the null hypothesis was rejected. We're 99
 ***
 
 ### Evaluation
-Thus, it was possible to conclude that the best model for the recommendation system was the SVD model with the lowest RMSE value of 1.366. That model was off by roughly 1 point for each guess it made for ratings. The Singular-Value Decomposition is a matrix decomposition method for reducing a matrix to its constituent parts in order to make certain subsequent matrix calculations simpler. The method is faster and more stable than other methods.
+Thus, it was possible to conclude that the best model for the recommendation system was the SVD model with the lowest RMSE value of 1.368. That model was off by roughly 1 point for each guess it made for ratings. The Singular-Value Decomposition is a matrix decomposition method for reducing a matrix to its constituent parts in order to make certain subsequent matrix calculations simpler. The method is faster and more stable than other methods.
 
 The A/B Testing showed that the change in the package of the products (pack of two instead of one) would decrease the buying rate by about 6.25%. Thus, we can confidently conclude, that the mentioned change will not be worth to implement.
 ***
